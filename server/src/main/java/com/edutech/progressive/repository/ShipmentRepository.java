@@ -9,6 +9,8 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.edutech.progressive.entity.Shipment;
+
 @Repository
 public interface ShipmentRepository extends JpaRepository<Shipment, Integer> {
 

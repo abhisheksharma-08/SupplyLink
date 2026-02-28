@@ -4,6 +4,13 @@ package com.edutech.progressive.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.edutech.progressive.entity.Warehouse;
+import com.edutech.progressive.exception.NoWarehouseFoundForSupplierException;
+import com.edutech.progressive.repository.ProductRepository;
+import com.edutech.progressive.repository.ShipmentRepository;
+import com.edutech.progressive.repository.WarehouseRepository;
+import com.edutech.progressive.service.WarehouseService;
+
 import java.sql.SQLException;
 import java.util.Collections;
 import java.util.List;

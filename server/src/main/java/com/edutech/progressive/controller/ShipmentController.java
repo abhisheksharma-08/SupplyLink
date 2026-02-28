@@ -1,6 +1,8 @@
 package com.edutech.progressive.controller;
 
 import com.edutech.progressive.entity.Shipment;
+import com.edutech.progressive.service.impl.ShipmentServiceImpl;
+
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

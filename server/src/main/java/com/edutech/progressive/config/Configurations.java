@@ -1,4 +1,4 @@
-package com.wecp.progressive.config;
+package com.edutech.progressive.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

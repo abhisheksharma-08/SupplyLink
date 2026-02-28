@@ -1,6 +1,9 @@
 package com.edutech.progressive.service;
 
 import com.edutech.progressive.entity.Supplier;
+import com.edutech.progressive.exception.SupplierAlreadyExistsException;
+import com.edutech.progressive.repository.SupplierRepository;
+
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
@@ -24,12 +27,12 @@ public class LoginService implements UserDetailsService {
 
     private final SupplierRepository supplierRepository;
 
-    private final PasswordEncoder passwordEncoder;
+    // private final PasswordEncoder passwordEncoder;
 
     @Autowired
     public LoginService(SupplierRepository supplierRepository, PasswordEncoder passwordEncoder) {
         this.supplierRepository = supplierRepository;
-        this.passwordEncoder = passwordEncoder;
+        //this.passwordEncoder = passwordEncoder;
     }
 
     public List<Supplier> getAllUsers() {
@@ -50,7 +53,7 @@ public class LoginService implements UserDetailsService {
             throw new SupplierAlreadyExistsException("User name Is Unavailable: " + user.getUsername());
 
         }
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+       // user.setPassword(passwordEncoder.encode(user.getPassword()));
         return supplierRepository.save(user);
     }
 

@@ -5,6 +5,10 @@ import java.sql.SQLException;
 import java.util.Comparator;
 import java.util.List;
 
+import com.edutech.progressive.dao.SupplierDAO;
+import com.edutech.progressive.entity.Supplier;
+import com.edutech.progressive.service.SupplierService;
+
 public class SupplierServiceImplJdbc implements SupplierService {
 
     private SupplierDAO supplierDAO;

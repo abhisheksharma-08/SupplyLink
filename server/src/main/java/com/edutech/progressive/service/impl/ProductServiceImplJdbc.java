@@ -4,6 +4,10 @@ package com.edutech.progressive.service.impl;
 import java.sql.SQLException;
 import java.util.List;
 
+import com.edutech.progressive.dao.ProductDAO;
+import com.edutech.progressive.entity.Product;
+import com.edutech.progressive.service.ProductService;
+
 public class ProductServiceImplJdbc implements ProductService {
 
     private ProductDAO productDAO;

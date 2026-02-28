@@ -4,6 +4,10 @@ package com.edutech.progressive.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.edutech.progressive.entity.Insurance;
+import com.edutech.progressive.repository.InsuranceRepository;
+import com.edutech.progressive.service.InsuranceService;
+
 import java.sql.SQLException;
 import java.util.List;
 

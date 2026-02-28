@@ -5,6 +5,10 @@ import java.sql.SQLException;
 import java.util.Comparator;
 import java.util.List;
 
+import com.edutech.progressive.dao.WarehouseDAO;
+import com.edutech.progressive.entity.Warehouse;
+import com.edutech.progressive.service.WarehouseService;
+
 public class WarehouseServiceImplJdbc implements WarehouseService {
 
     private WarehouseDAO warehouseDAO;

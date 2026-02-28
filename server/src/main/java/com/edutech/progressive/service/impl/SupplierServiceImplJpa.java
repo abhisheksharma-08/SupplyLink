@@ -5,6 +5,15 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.edutech.progressive.entity.Supplier;
+import com.edutech.progressive.exception.SupplierAlreadyExistsException;
+import com.edutech.progressive.exception.SupplierDoesNotExistException;
+import com.edutech.progressive.repository.ProductRepository;
+import com.edutech.progressive.repository.ShipmentRepository;
+import com.edutech.progressive.repository.SupplierRepository;
+import com.edutech.progressive.repository.WarehouseRepository;
+import com.edutech.progressive.service.SupplierService;
+
 import java.sql.SQLException;
 import java.util.Collections;
 import java.util.List;
@@ -12,8 +21,8 @@ import java.util.List;
 @Service
 public class SupplierServiceImplJpa implements SupplierService {
 
-    @Autowired
-    PasswordEncoder passwordEncoder;
+    // @Autowired
+    // PasswordEncoder passwordEncoder;
 
     @Autowired
     WarehouseRepository warehouseRepository;
@@ -46,7 +55,7 @@ public class SupplierServiceImplJpa implements SupplierService {
         if (existingEmail != null) {
             throw new SupplierAlreadyExistsException("User with the given email address already exists: " + supplier.getEmail());
         }
-        supplier.setPassword(passwordEncoder.encode(supplier.getPassword()));
+        // supplier.setPassword(passwordEncoder.encode(supplier.getPassword()));
         return supplierRepository.save(supplier).getSupplierId();
     }
 
@@ -65,7 +74,7 @@ public class SupplierServiceImplJpa implements SupplierService {
                 throw new SupplierAlreadyExistsException("User name Is Unavailable: " + supplier.getUsername());
             }
             if (!oldUser.getPassword().equals(supplier.getPassword())) {
-                supplier.setPassword(passwordEncoder.encode(supplier.getPassword()));
+                // supplier.setPassword(passwordEncoder.encode(supplier.getPassword()));
             }
             supplierRepository.save(supplier);
         }

@@ -105,13 +105,7 @@ public class Supplier implements Comparable<Supplier> {
         // Implement comparison logic based on account balance
         return this.getSupplierName().compareTo(otherSupplier.getSupplierName());
     }
-}
+
  
-    public String getRole() {
-        return role;
-    }
- 
-    public void setRole(String role) {
-        this.role = role;
-    }
+   
 }

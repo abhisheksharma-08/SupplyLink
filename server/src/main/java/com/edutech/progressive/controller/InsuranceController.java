@@ -1,6 +1,8 @@
 package com.edutech.progressive.controller;
 
 import com.edutech.progressive.entity.Insurance;
+import com.edutech.progressive.service.impl.InsuranceServiceImpl;
+
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

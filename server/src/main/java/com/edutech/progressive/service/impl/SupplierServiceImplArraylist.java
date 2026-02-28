@@ -3,6 +3,9 @@ package com.edutech.progressive.service.impl;
 
 import org.springframework.stereotype.Service;
 
+import com.edutech.progressive.entity.Supplier;
+import com.edutech.progressive.service.SupplierService;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
